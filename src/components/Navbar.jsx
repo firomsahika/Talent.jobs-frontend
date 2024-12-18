@@ -1,12 +1,39 @@
-import React from 'react'
+'use client'
+
+
+import { useState, useEffect } from "react"
 
 const Navbar = () => {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const [toggle, setToggle] = useState(false);
+
+    const handleToggle = () => {
+        setToggle(!toggle);
+    }
+
     return (
-        <div className='flex items-center justify-around text-black text-sm gap-x-60 p-6  mx-16 bg-slate-100 rounded-2xl font-semibold'>
-            <div>
-                <h1 className='font-extrabold text-xl'>Talent.Jobs</h1>
+        <div className={`fixed w-full flex items-center justify-around  text-white text-sm gap-x-60 p-5  backdrop-blur-3xl z-10 border-b border-[#12AAE2] rounded-b-3xl font-semibold 
+        ${isScrolled ? 'bg-[#0b539b]' : ''}
+        `}>
+            <div className="hidden md:flex">
+                <h1 className='font-extrabold text-md'>Talent.Jobs</h1>
             </div>
-            <div>
+            <div className='hidden md:flex text-white'>
                 <ul className='flex items-center justify-center gap-x-20 cursor-pointer'>
                     <li>Hire Talent</li>
                     <li>Jobs</li>
@@ -14,9 +41,24 @@ const Navbar = () => {
                     <li>Contact</li>
                 </ul>
             </div>
+            <div className='flex md:hidden'>
+                {
+                    toggle ? (
+                        <>
+                            <button onClick={handleToggle}>X</button>
+                        </>
+                    )
+                        :
+                        (
+                            <>
+                                <button onClick={handleToggle}>M</button>
+                            </>
+                        )
+                }
+            </div>
             <div className='flex gap-x-2'>
-                <button className='border px-5 py-1 rounded-xl '>Login</button>
-                <button className='text-white px-5 py-1 bg-btn rounded-xl' >Signup</button>
+                <button className='border px-5 py-1 rounded-xl border-[#12AAE2] '>Login</button>
+                <button className='text-white px-5 py-1 bg-[#12AAE2] rounded-xl' >Signup</button>
             </div>
         </div>
     )

@@ -20,10 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className='font-raleway bg-white '
+        className='font-jost  '
       >
         {children}
       </body>
     </html>
   );
 }
+
+
+// bg-[#e4e7e9] 

@@ -13,10 +13,10 @@ export default {
         btn: "#282b4a"
       },
       backgroundImage: {
-        'hero': "url('/hero-img.png')"
+        'hero': "url('/hero2.png')"
       },
       fontFamily: {
-        raleway: ["Raleway", "sans-serif"], // Correctly formatted as an array
+        jost: ["Jost", "sans-serif"], // Correctly formatted as an array
       },
 
     },
