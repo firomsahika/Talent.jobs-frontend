@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -13,7 +14,7 @@ export default {
         btn: "#282b4a"
       },
       backgroundImage: {
-        'hero': "url('/hero2.png')"
+        'hero': "url('/bg.png')"
       },
       fontFamily: {
         jost: ["Jost", "sans-serif"], // Correctly formatted as an array

@@ -27,13 +27,13 @@ const Navbar = () => {
     }
 
     return (
-        <div className={`fixed w-full flex items-center justify-around  text-white text-sm gap-x-60 p-5  backdrop-blur-3xl z-10 border-b border-[#12AAE2] rounded-b-3xl font-semibold 
-        ${isScrolled ? 'bg-[#0b539b]' : ''}
+        <div className={` fixed w-full flex items-center justify-around  text-slate-800 text-md gap-x-60 p-5  backdrop-blur-3xl z-10 border-b font-semibold 
+        ${isScrolled ? '' : ''}
         `}>
             <div className="hidden md:flex">
                 <h1 className='font-extrabold text-md'>Talent.Jobs</h1>
             </div>
-            <div className='hidden md:flex text-white'>
+            <div className='hidden md:flex text-slate-800'>
                 <ul className='flex items-center justify-center gap-x-20 cursor-pointer'>
                     <li>Hire Talent</li>
                     <li>Jobs</li>

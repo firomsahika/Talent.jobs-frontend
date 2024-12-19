@@ -38,7 +38,7 @@ const JobsForYou = () => {
         },
         {
             icon: <BsProjectorFill size={40} />,
-            title: "Accoun",
+            title: "Account/Finance",
             description: "( 4 open position )",
 
         },
@@ -47,7 +47,7 @@ const JobsForYou = () => {
 
     return (
         <div className='w-full h-screen text-black flex flex-col     items-center justify-center gap-y-40 px-10'>
-            <h1 className='text-4xl font-medium'>Popular Job Categories</h1>
+            <h1 className='text-4xl font-bold'>Popular Job Categories</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                 {
                     processes.map((proc, index) => (
@@ -55,7 +55,7 @@ const JobsForYou = () => {
                             className='flex  gap-x-6 items-center justify-center   border 
                              px-10 py-10 rounded-xl shadow-md hover:scale-110 transition-transform'
                         >
-                            <p className='bg-[rgb(204,237,249)] p-4 rounded-xl'>{proc.icon}</p>
+                            <p className=' p-4 rounded-xl'>{proc.icon}</p>
                             <div className='flex flex-col '>
                                 <p className='font-bold text-black text-xl'>{proc.title}</p>
                                 <p className='flex items-center justify-center font-medium text-center max-w-sm'>{proc.description}</p>
